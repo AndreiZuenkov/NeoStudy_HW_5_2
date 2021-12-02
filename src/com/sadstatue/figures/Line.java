@@ -2,13 +2,13 @@ package com.sadstatue.figures;
 
 public class Line extends Point {
 
-    private double length;
+    double length;
 
     public Line() {
     }
 
     public Line(double length) {
-        setType("line");
+        type="Line";
         this.length = length;
     }
 
@@ -19,5 +19,14 @@ public class Line extends Point {
 
     public void setLength(double length) {
         this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure{" +
+                "type=" + type +
+                ", length='" + length + '\'' +
+                ", square=" + square +
+                '}';
     }
 }
