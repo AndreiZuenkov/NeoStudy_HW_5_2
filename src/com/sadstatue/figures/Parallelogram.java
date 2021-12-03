@@ -2,16 +2,15 @@ package com.sadstatue.figures;
 
 public class Parallelogram extends Rectangle {
 
-    double alphaAngle;
+    private double alphaAngle;
 
     public Parallelogram(double a, double b, double alphaAngle) {
 
-        setType("Parallelogram");
+        type="Parallelogram";
         this.a = a;
         this.b = b;
         this.alphaAngle = alphaAngle;
-        setLength((a + b) * 2);
-        setSquare();
+        setLength();
     }
 
     @Override

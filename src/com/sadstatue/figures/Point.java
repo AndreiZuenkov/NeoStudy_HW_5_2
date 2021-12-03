@@ -1,29 +1,22 @@
 package com.sadstatue.figures;
 
-public class Point {
+public class Point extends Figure {
 
-    String type;
-    final double length = 0;
-    final double square = 0;
+
+    private final double length = 0;
+    protected final double square = 0;
 
     public Point() {
-        setType("Point");
+        type = "Point";
+
     }
 
     public double getLength() {
         return length;
     }
 
-    public String getType() {
-        return type;
-    }
-
     public double getSquare() {
         return square;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     @Override

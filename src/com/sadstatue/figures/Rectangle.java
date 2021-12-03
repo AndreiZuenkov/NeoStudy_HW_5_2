@@ -1,35 +1,28 @@
 package com.sadstatue.figures;
 
-public class Rectangle extends Line {
+public class Rectangle extends Figure {
 
-    double square;
-    double a,b;
 
-    public Rectangle(){};
+    protected double a, b;
+
+    public Rectangle() {
+    }
 
     public Rectangle(double a, double b) {
-        setType("Rectangle");
-        this.a=a;
-        this.b=b;
+        type = "Rectangle";
+        this.a = a;
+        this.b = b;
+        setLength();
+    }
+
+    protected void setLength() {
+        length = (a + b) * 2;
         setSquare();
-        setLength((a+b)*2);
     }
 
     public void setSquare() {
-        square=a*b;
+        square = a * b;
     }
 
-    @Override
-    public double getSquare() {
-        return square;
-    }
 
-    @Override
-    public String toString() {
-        return "Figure{" +
-                "type=" + type +
-                ", length='" + length + '\'' +
-                ", square=" + square +
-                '}';
-    }
 }

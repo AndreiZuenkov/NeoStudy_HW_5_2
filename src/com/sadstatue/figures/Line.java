@@ -1,24 +1,15 @@
 package com.sadstatue.figures;
 
-public class Line extends Point {
+public class Line extends Figure {
 
-    double length;
 
-    public Line() {
-    }
+    private final double square = 0;
+
 
     public Line(double length) {
-        type="Line";
+        type = "Line";
         this.length = length;
-    }
 
-    @Override
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
     }
 
     @Override
