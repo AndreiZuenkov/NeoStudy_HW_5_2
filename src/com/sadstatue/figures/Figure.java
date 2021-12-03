@@ -19,9 +19,6 @@ package com.sadstatue.figures;
         return square;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
      @Override
      public String toString() {
          return "Figure{" +
