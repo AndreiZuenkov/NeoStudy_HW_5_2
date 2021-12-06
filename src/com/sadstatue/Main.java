@@ -8,35 +8,26 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-//        List<Figure> listOfFigure=new ArrayList<>(){{
-//            add(new Point());
-//            add(new Line(10));
-//            add(new Circle(10));
-//            add(new Triangle(2,3,4));
-//            add(new Rectangle(2,3));
-//            add(new Square(2));
-//            add(new Parallelogram(2,2,90));
-//        }};
-//
-//        for (Figure f: listOfFigure
-//             ) {
-//            System.out.println("Type: " + f.getType() + ", Length = " + f.getLength() + ", Square = " + f.getSquare());
-//        }
-//
-//
-//        //or
-//        for (Figure f: listOfFigure
-//             ) {
-//            System.out.println(f);
-//        }
-//
-        Point groundPoint=new Point(0,0);
 
-        Line line=new Line(groundPoint, new Point(2,3));
-        Circle circle=new Circle(groundPoint, new Point(5,0));
-        Rectangle rectangle=new Rectangle(groundPoint, new Point(5,4),new Point(0,4));
-        System.out.println(rectangle);
-//        System.out.println(circle);
+        Point groundPoint = new Point(0, 0);
+
+        List<Figure> figures = new ArrayList<>() {{
+            add(groundPoint);
+            add(new Line(groundPoint, new Point(2, 3)));
+            add(new Circle(groundPoint, new Point(5, 0)));
+            add(new Triangle(groundPoint, new Point(0, 5), new Point(2, 5)));
+            add(new Rectangle(groundPoint, new Point(5, 4), new Point(0, 4)));
+            add(new Square(groundPoint, new Point(5, 5), new Point(0, 5)));
+            add(new Parallelogram(groundPoint, new Point(5, 5), new Point(1, 5)));
+
+        }};
+
+        for (Figure f : figures
+        ) {
+            System.out.println("Type: " + f.getType() + ", length= " + f.getLength() + ", square= " + f.getSquare());
+//            or
+//            System.out.println(f);
+        }
 
     }
 }

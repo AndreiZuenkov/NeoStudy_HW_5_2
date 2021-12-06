@@ -1,13 +1,13 @@
 package com.sadstatue.figures;
 
- public abstract class Figure {
+public abstract class Figure {
 
     String type;
     double length;
     double square;
 
 
-     public String getType() {
+    public String getType() {
         return type;
     }
 
@@ -19,12 +19,12 @@ package com.sadstatue.figures;
         return square;
     }
 
-     @Override
-     public String toString() {
-         return "Figure{" +
-                 "type=" + type +
-                 ", length='" + length + '\'' +
-                 ", square=" + square +
-                 '}';
-     }
+    @Override
+    public String toString() {
+        return "Figure{" +
+                "type=" + type +
+                ", length='" + length + '\'' +
+                ", square=" + square +
+                '}';
+    }
 }

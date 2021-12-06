@@ -15,13 +15,13 @@ public class Line extends Figure {
 
     public Line(Point point1, Point point2) {
         type = "Line";
-        this.point1=point1;
-        this.point2=point2;
+        this.point1 = point1;
+        this.point2 = point2;
         setLength();
     }
 
     private void setLength() {
-        length=Math.sqrt(Math.pow((point2.getX()-point1.getX()),2)+Math.pow((point2.getY()-point1.getY()), 2));
+        length = Math.sqrt(Math.pow((point2.getX() - point1.getX()), 2) + Math.pow((point2.getY() - point1.getY()), 2));
     }
 
     @Override

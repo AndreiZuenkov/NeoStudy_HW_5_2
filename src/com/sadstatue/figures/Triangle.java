@@ -1,25 +1,30 @@
 package com.sadstatue.figures;
 
-public class Triangle extends Figure {
+public class Triangle extends Rectangle {
 
-    private double a, b, c;
+    private Line lineAB;
 
-    public Triangle(double a, double b, double c) {
+    public Triangle(Point pointA, Point pointB, Point pointC) {
         type = "Triangle";
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.pointC = pointC;
         setLength();
     }
 
-    private void setLength() {
-        length = a + b + c;
+    protected void setLength() {
+        lineAC = new Line(pointA, pointC);
+        lineBC = new Line(pointB, pointC);
+        lineAB = new Line(pointA, pointB);
+        length = lineAC.getLength() + lineBC.getLength() + lineAB.getLength();
         setSquare();
     }
 
-    private void setSquare() {
-        double p = (a + b + c) / 2;
-        square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    protected void setSquare() {
+        double a = lineAC.getLength();
+        double b = lineBC.getLength();
+        double c = lineAB.getLength();
+        square = Math.sqrt((length / 2) * ((length / 2) - a) * ((length / 2) - b) * ((length / 2) - c));
     }
 
 }

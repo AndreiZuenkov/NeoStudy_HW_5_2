@@ -8,10 +8,10 @@ public class Point extends Figure {
     protected final double square = 0;
 
 
-    public Point(double x,double y){
+    public Point(double x, double y) {
         type = "Point";
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
     }
 
     public double getLength() {
