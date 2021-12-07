@@ -21,7 +21,7 @@ public class Parallelogram extends Rectangle {
         double b = lineBC.getLength();
         double c = lineAB.getLength();
 
-        double alphaAngle = Math.toDegrees(Math.acos((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b)));
+        double alphaAngle = Math.toDegrees(Math.acos((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b))); //угол между lineAC и lineBC
 
         square = lineAC.getLength() * lineBC.getLength() * (Math.sin(Math.toRadians(alphaAngle)));
     }
